@@ -25,23 +25,58 @@ document.addEventListener('DOMContentLoaded', function () {
   // header section
   const header = createNewElement('header', 'header');
   const headerContainer = createNewElement('div', 'header__container');
+
   const startNewGameBtn = createNewElement(
     'button',
     'btn header__btn header__btn--start'
   );
   startNewGameBtn.textContent = 'Start New Game';
 
+  const gameInfoContainer = createNewElement('div', 'game-info');
+
+  // Moves
+  const movesItem = createNewElement('div', 'game-info__item');
+  const movesLabel = createNewElement('span', 'game-info__label');
+  movesLabel.textContent = 'Moves';
+  const gameInfoMoves = createNewElement('span', 'game-info__value moves');
+  gameInfoMoves.textContent = '0';
+  movesItem.append(movesLabel);
+  movesItem.append(gameInfoMoves);
+
+  // Time
+  const timeItem = createNewElement('div', 'game-info__item');
+  const timeLabel = createNewElement('span', 'game-info__label');
+  timeLabel.textContent = 'Time';
+  const gameTimer = createNewElement('span', 'game-info__value game-timer');
+  gameTimer.textContent = '00:00';
+  timeItem.append(timeLabel);
+  timeItem.append(gameTimer);
+
+  // Pairs
+  const pairsItem = createNewElement('div', 'game-info__item');
+  const pairsLabel = createNewElement('span', 'game-info__label');
+  pairsLabel.textContent = 'Pairs';
+  const gameInfoPairs = createNewElement('span', 'game-info__value pairs');
+  gameInfoPairs.textContent = '0 / 8';
+  pairsItem.append(pairsLabel);
+  pairsItem.append(gameInfoPairs);
+
+  gameInfoContainer.append(movesItem);
+  gameInfoContainer.append(timeItem);
+  gameInfoContainer.append(pairsItem);
+
   const leaderboardBtn = createNewElement(
     'button',
     'btn header__btn header__btn--leaderboard'
   );
-  startNewGameBtn.textContent = 'Leaderboard';
+  leaderboardBtn.textContent = 'Leaderboard';
 
-  header.append(headerContainer);
   headerContainer.append(startNewGameBtn);
+  headerContainer.append(gameInfoContainer);
   headerContainer.append(leaderboardBtn);
+  header.append(headerContainer);
   document.body.append(header);
-
+  
   // main section
   const main = createNewElement('main', 'main');
   const gameBoard = createNewElement('div', 'game-board');
