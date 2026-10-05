@@ -254,7 +254,8 @@ document.addEventListener('DOMContentLoaded', function () {
       !card ||
       !gameData.isGameActive ||
       gameData.mismatchTimerId !== null ||
-      gameData.cardPair.includes(card)
+      gameData.cardPair.includes(card) ||
+      card.classList.contains('matched')
     ) {
       return;
     }
