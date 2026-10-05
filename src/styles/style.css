@@ -1,3 +1,8 @@
+
+.body:has(.modal.is-active) {
+  overflow: hidden;
+}
+
 .body {
   display: flex;
   flex-direction: column;
@@ -34,18 +39,43 @@
 }
 
 .modal {
-  display: none;
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(64, 63, 61, 0.8);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* .modal.card.is-active {
-  display: block;
-} */
+.modal.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
-/* .modal__wrapper {}
+.modal__wrapper {
+  display:  flex;
+  flex-direction: column;
+  gap: 10px;
+  color: black;
+  background-color: antiquewhite;
+  border-radius: 40px;
+  padding: 30px;
+}
 
-.modal__title {}
+.modal__title {
+  margin: 0;
+}
 
-.modal__wrapper {} */
 .win .modal__list {
   list-style: none;
 }
@@ -92,4 +122,9 @@
 
 .card.is-visible .card__img {
   display: block;
+}
+
+.card.is-visible .matched {
+  background: transparent;
+  pointer-events: none;
 }
