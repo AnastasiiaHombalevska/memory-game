@@ -1,35 +1,35 @@
 const cards = [
   {
     id: 1,
-    image: '../src/images/18.01.58.png',
+    image: './images/18.01.58.png',
   },
   {
     id: 2,
-    image: '../src/images/18.02.18.png',
+    image: './images/18.02.18.png',
   },
   {
     id: 3,
-    image: '../src/images/18.02.34.png',
+    image: './images/18.02.34.png',
   },
   {
     id: 4,
-    image: '../src/images/18.02.49.png',
+    image: './images/18.02.49.png',
   },
   {
     id: 5,
-    image: '../src/images/18.03.23.png',
+    image: './images/18.03.23.png',
   },
   {
     id: 6,
-    image: '../src/images/18.03.46.png',
+    image: './images/18.03.46.png',
   },
   {
     id: 7,
-    image: '../src/images/18.04.00.png',
+    image: './images/18.04.00.png',
   },
   {
     id: 8,
-    image: '../src/images/18.04.16.png',
+    image: './images/18.04.16.png',
   },
 ];
 
