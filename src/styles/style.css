@@ -37,18 +37,20 @@
   display: none;
 }
 
-.modal.card.is-active {
+/* .modal.card.is-active {
   display: block;
-}
+} */
 
 /* .modal__wrapper {}
 
 .modal__title {}
 
 .modal__wrapper {} */
+.win .modal__list {
+  list-style: none;
+}
 
 .modal__list {
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -56,7 +58,7 @@
   margin: 0;
 }
 
-.game__bord__wrapper {
+.game-board__wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -75,12 +77,19 @@
   box-sizing: border-box;
 }
 
-/* .card.is-visible {} */
-
 .card__img {
+  display: none;
   width: 100%;
   height: 100%;
   border: 1px solid salmon;
   border-radius: 40px;
   object-fit: cover;
+}
+
+.card.is-visible {
+  background: transparent;
+}
+
+.card.is-visible .card__img {
+  display: block;
 }
