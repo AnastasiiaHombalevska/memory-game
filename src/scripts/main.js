@@ -260,8 +260,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    gameData.moves++;
-    gameInfoMoves.textContent = gameData.moves;
     card.classList.add('is-visible');
     checkTwoCards(card);
   });
@@ -280,6 +278,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (gameData.cardPair.length < 2) {
       return;
     }
+
+    gameData.moves++;
+    gameInfoMoves.textContent = gameData.moves;
 
     if (
       gameData.cardPair[0].dataset.cardId ===
