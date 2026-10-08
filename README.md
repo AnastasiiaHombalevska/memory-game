@@ -13,7 +13,7 @@ Memory Game is a card-matching game where the player needs to find all 8 matchin
 
 - To run the application locally, clone the repository:
   ```bash
-  git clone
+  git clone https://github.com/AnastasiiaHombalevska/memory-game.git
 
 - Switch to the memory-game branch:
   ```bash
